@@ -1,0 +1,48 @@
+<th:block th:fragment="form">
+    <div class="col-md-4">
+
+        <div class="field">
+            <label for="InputName">Name</label>
+            <input type="text"
+                   id="name" placeholder="Name" th:field="*{name}"
+                   th:value="${user.name}" />
+        </div>
+        <div class="field">
+            <label for="InputSurname">Surname</label>
+            <input type="text"
+                 id="surname" placeholder="Surname"
+                 th:field="*{surname}" th:value="${user.surname}" />
+        </div>
+
+        <div class="field">
+            <label for="InputEmail">Email address</label>
+            <input type="email"
+                 id="email" placeholder="Email"
+                 th:field="*{email}" th:value="${user.email}" />
+        </div>
+        <div class="field">
+            <label for="InputPassword1">Password</label>
+            <input type="password"
+                id="password" placeholder="Password"
+                th:field="*{password}" th:value="${user.password}" />
+        </div>
+
+        <div class="field">
+            <label for="InputPassword2">Password Again</label>
+            <input
+                type="password"  id="passwordAgain"
+                name="passwordAgain" placeholder="Password Again" />
+        </div>
+
+        <div class="field">
+            <label for="phone">Phone</label>
+            <input
+                    type="text"  id="phone"
+                    name="phone" placeholder="Phone" />
+        </div>
+
+        <button type="submit" class="ui button" th:type="submit">Submit</button>
+
+    </div>
+
+</th:block>
